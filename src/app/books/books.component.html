@@ -1,0 +1,6 @@
+<app-list [list]="books" (onEdit)="onNameEdit(newBookName)"></app-list>
+
+<app-add (onBookAdd)="addNewBook($event)"></app-add>
+
+<h4> Find a book </h4>
+<app-find></app-find>

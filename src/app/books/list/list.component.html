@@ -1,0 +1,19 @@
+<!--
+<div *ngIf="list.length > 0" then #displayList else #displayNone></div>
+
+<ng-template #displayList>
+    <div> Then block</div>
+    <div *ngFor="let l of list">{{l.name}}</div>
+</ng-template> 
+
+<ng-template #displayNone> No books to display </ng-template> 
+-->
+
+<div *ngFor="let book of list">
+    <div 
+        [attr.contenteditable]="isEditable[book.name]"
+        (click)="onChange(book.name, true)"
+        (focusout)="onEdit(book.name)">
+            {{book.name}}
+    </div>
+</div>
